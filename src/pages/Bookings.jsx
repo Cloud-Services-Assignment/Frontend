@@ -1,6 +1,12 @@
+import Header from "../components/Header"
+
 function Bookings() {
   return (
-    <div>Bookings</div>
+    <>
+      <title>Bookings | Ventixe</title>
+      <Header pageTitle={"Bookings"} />
+      <main className="surface">Bookings</main>
+    </>
   )
 }
 
