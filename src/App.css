@@ -58,7 +58,9 @@ img {
   --cool-grey-10: #EEEFFF;
   --grey-10: #FFFFFF;
   --grey-20: #F7F7F7;
+  --grey-40: #E0E0E1;
   --grey-70: #777779;
+  --grey-100: #1E1E20;
 
   --clr-background: var(--grey-10);
   --clr-body: var(--grey-70);
@@ -121,6 +123,20 @@ img {
   &.dark {
     background-color: var(--cool-grey-10);
   }
+
+  &.small {
+    padding: 1.2rem;
+  }
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-primary {
+  color: var(--primary-100);
 }
 
 /* General styling */
@@ -173,19 +189,16 @@ p, h1, h2, h3, h4, h5, h6, span {
 .senary-heading {
   font-size: var(--fs-450);
   font-weight: var(--fw-semi-bold);
+  color: var(--grey-100);
 }
 
 /* Structure & Layout */
-.content-grid {
-  --max-width: 1200px;
-  --padding-inline: 3.125%;
+.card-grid {
+    --min-col-size: 300px;
 
-  display: grid;
-  grid-template-columns: 1fr [content-start] min(var(--max-width), 100% - var(--padding-inline) * 2) [content-end] 1fr;
-
-  > * {
-    grid-column: content;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(var(--min-col-size), 100%), 1fr));
+    gap: 1.2rem;
 }
 
 .portal-grid {
@@ -256,7 +269,40 @@ p, h1, h2, h3, h4, h5, h6, span {
 }
 
 .btn {
-  
+  border-radius: 1.2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--grey-10);
+  border: 1px solid var(--primary-100);
+  color: var(--grey-100);
+
+  &:hover {
+    background-color: var(--primary-100);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 200px;
+  background-color: var(--grey-40);
+  border-radius: 1.2rem;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 /* Tablet */
