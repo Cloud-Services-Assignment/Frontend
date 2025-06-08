@@ -324,6 +324,12 @@ p, h1, h2, h3, h4, h5, h6, span {
   }
 }
 
+.event-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
 /* Components */
 .logo {
   font-family: var(--ff-logo);
@@ -409,6 +415,29 @@ p, h1, h2, h3, h4, h5, h6, span {
 
 .booking > :last-child {
   border: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 400px;
+
+  > :last-child {
+    margin-top: 5rem;
+  }
+}
+
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+input {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.6rem;
+  background-color: var(--grey-20);
 }
 
 /* Tablet */
