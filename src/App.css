@@ -58,6 +58,7 @@ img {
   --cool-grey-10: #EEEFFF;
   --grey-10: #FFFFFF;
   --grey-20: #F7F7F7;
+  --grey-30: #EDEDED;
   --grey-40: #E0E0E1;
   --grey-70: #777779;
   --grey-100: #1E1E20;
@@ -66,7 +67,7 @@ img {
   --clr-body: var(--grey-70);
   --clr-heading: var();
   --clr-logo: var(--secondary-110);
-  --clr-border: var();
+  --clr-border: var(--grey-30);
 
   /* Typography */
   --ff-primary: 'Inter', sans-serif;
@@ -303,6 +304,26 @@ p, h1, h2, h3, h4, h5, h6, span {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+
+.bookings {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 1.2rem;
+  
+  tr {
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  th, td {
+    padding: 1.2rem 1.6rem;
+  }
+}
+
+.booking > :last-child {
+  border: 0;
 }
 
 /* Tablet */
